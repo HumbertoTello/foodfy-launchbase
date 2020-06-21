@@ -68,3 +68,39 @@ header img {
   margin-left: 624px;
   margin-top: -125px;
 }
+
+/* Cards */
+
+.cards__title {
+  margin-top: 50px; 
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: #111111;
+}
+
+.cards__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px 30px;
+}
+
+.card__img img{
+  width: 300px;
+  height: 140px;
+}
+
+.card__title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #111111;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.card__author {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #777777;
+}
