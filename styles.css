@@ -104,3 +104,19 @@ header img {
   font-size: 14px;
   color: #777777;
 }
+
+/* Footer */
+
+footer {
+  margin-top: 50px;
+  height: 62px;
+  background: #EEEEEE;
+}
+
+footer p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #999999;
+  text-align: center;
+  padding: 23px 0;
+}
