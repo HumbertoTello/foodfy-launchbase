@@ -11,10 +11,12 @@
 
 <body>
   <header>
-    <img src="./public/logo.png" alt="Foodfy logo">
+    <a href="index.html">
+      <img src="./public/logo.png" alt="Foodfy logo">
+    </a>
     <div class="links">
-      <a href="/">Sobre</a>
-      <a href="/">Receitas</a>
+      <a href="about.html">Sobre</a>
+      <a href="recipes.html">Receitas</a>
     </div>
   </header>
 
@@ -106,9 +108,22 @@
     </div>
   </section>
 
+  <div class="modal-overlay">
+    <div class="modal">
+      <div class="modal__content">
+        <img src="" alt="">
+        <p class="modal__title">Triplo bacon burger</p>
+        <p class="modal__author">por Jorge Relato</p>
+        <p class="modal__close">Fechar modal</p>
+      </div>
+    </div>
+  </div>
+
   <footer>
     <p>Todos direitos reservados, receitas Foodfy.</p>
   </footer>
+
+  <script src="./scripts.js"></script>
 </body>
 
 </html>
