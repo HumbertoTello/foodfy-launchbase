@@ -1,0 +1,19 @@
+{
+  "name": "desafio3",
+  "version": "1.0.0",
+  "description": "Desafio do bootcamp LaunchBase para construir um site completo de empresa de receitas chamada Foodfy.",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
