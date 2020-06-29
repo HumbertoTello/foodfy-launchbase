@@ -1,0 +1,64 @@
+{% extends "admin/layout.njk" %}
+
+{% block content %}
+  <form class="create_recipe" method="POST" action="/admin">
+    <div class="subheader">
+      <p>Criando receita</p>
+      <button type="submit">Salvar</button>
+    </div>
+
+    <div class="item first">
+      <div class="title">Imagem da receita</div>
+      <div>
+        <input type="text" name="recipe_url" placeholder="http://" value="">
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="title">Nome da receita</div>
+      <div>
+        <input type="text" name="title" value="">
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="title">Autor da receita</div>
+      <div>
+        <input type="text" name="author" value="">
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="title">Ingredientes</div>
+      <div id="ingredients">
+        <div class="ingredient">
+          <input type="text" name="ingredients[]" value="" placeholder="Insira o ingrediente"/>
+        </div>
+      </div>
+      <div>
+        <p class="button-create add-ingredient">Adicionar novo ingrediente</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="title">Modo de preparo</div>
+      <div id="preparations">
+        <div class="preparation">
+          <input type="text" name="preparations[]" value="" placeholder="Insira o passo de preparo"/>
+        </div>
+      </div>
+      <div>
+        <p class="button-create add-preparation">Adicionar novo passo</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="title">Informações adicionais</div>
+      <div>
+        <textarea type="text" name="information" value="" placeholder="Deseja colocar informações adicionais?"></textarea>
+      </div>
+    </div>
+  </form>
+
+  <script src="/scripts2.js"></script>
+{% endblock %}
