@@ -1,0 +1,68 @@
+{% extends "home/layout.njk" %}
+
+{% block content %}
+
+  <div class="recipe__img">
+    <img src="{{recipe.image}}" alt="">
+  </div>
+
+  <section class="recipe">
+    <div class="recipe__title">
+      <p>{{recipe.title}}</p>
+    </div>
+    <div class="recipe__author">
+      <p>
+        {% for chef in chefOptions %}
+          {% if recipe.chef_id == chef.id %} {{chef.name}} {% endif %}
+        {% endfor %}
+      </p>
+    </div>
+
+    <div class="ingredients">
+      <div class="subtitle__header">
+        <div class="subtitle">
+          <p>Ingredientes</p>
+        </div>
+        <div class="button ingredients">
+          <p>ESCONDER</p>
+        </div>
+      </div>
+      <ul class="ul ingredient">
+        {% for ingredient in recipe.ingredients%}
+          <li>{{ingredient}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="preparation">
+      <div class="subtitle__header">
+        <div class="subtitle">
+          <p>Modo de preparo</p>
+        </div>
+        <div class="button preparation">
+          <p>ESCONDER</p>
+        </div>
+      </div>
+      <ul class="ul preparation">
+        {% for step in recipe.preparation%}
+          <li>{{step}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="information">
+      <div class="subtitle__header">
+        <div class="subtitle">
+          <p>Informações adicionais</p>
+        </div>
+        <div class="button information">
+          <p>ESCONDER</p>
+        </div>
+      </div>
+      <div class="information__text">
+        <p>{{recipe.information}}</p>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

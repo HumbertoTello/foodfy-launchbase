@@ -1,0 +1,384 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Header */
+
+html {
+  min-height: 100%;
+}
+
+.body-wrapper {
+  max-width: 960px;
+  min-height: 100%;
+  margin: auto;
+  position: relative;
+}
+
+header {
+  display: inline-flex;
+  margin-top: 36.1px;
+  margin-bottom: 30px;
+}
+
+header img {
+  width: 90.6px;
+  height: 26.9px;
+  margin-right: 122.4px;
+}
+
+.links {
+  padding-top: 1.9px;
+}
+
+.links a {
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #111111;
+  margin: 0 30px;
+}
+
+/* Banner */
+
+.banner {
+  width: 940px;
+  height: 366px;
+  background-color: #FBDFDB;
+  border-radius: 30px;
+}
+
+.banner__title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  color: #111111;
+  padding-left: 60px;
+  padding-top: 117px;
+}
+
+.banner__description {
+  opacity: 0.7;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #000000;
+  height: 7.6%;
+  line-height: 28px;
+  padding-left: 60px;
+  margin-top: 10px;
+}
+
+.banner img {
+  margin-left: 624px;
+  margin-top: -125px;
+}
+
+/* Cards */
+
+.cards__title {
+  margin-top: 50px; 
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: #111111;
+}
+
+.cards__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px 30px;
+}
+
+.card__img img{
+  width: 300px;
+  height: 140px;
+  border-radius: 15px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.card__title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #111111;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.card__author {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #777777;
+}
+
+/* Footer */
+
+html {
+  position: relative;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 0;
+  width: 100%;
+  height: 62px;
+  background: #EEEEEE;
+}
+
+.push {
+  height: 100px;
+}
+
+footer p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #999999;
+  text-align: center;
+  padding: 23px 0;
+}
+
+/* About */
+
+.about {
+  margin: 50px auto;
+}
+
+.about__title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #111111;
+}
+
+.about__subtitle {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #111111;
+}
+
+.about__text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #444444;
+  line-height: 28px;
+}
+
+/* Modal */
+
+.modal-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.modal {
+  opacity: 1;
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  width: 660px;
+  height: 413px;
+  margin: 20vh auto;
+}
+
+.modal__content {
+  text-align: center;
+}
+
+.modal__content img{
+  margin-top: 30px;
+  width: 600px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.modal__title {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  color: #111111;
+}
+
+.modal__author {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #777777;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.modal__close {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #999999;
+  cursor: pointer;
+}
+
+.modal-overlay.active {
+  visibility: visible;
+}
+
+/* Recipe */
+
+.recipe__img img {
+  width: 940px;
+  height: 280px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.recipe {
+  margin-top: 50px;
+}
+
+.recipe__title {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  color: #111111;
+  margin-bottom: 5px;
+}
+
+.recipe__author {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  color: #777777;
+  margin-bottom: 50px;
+}
+
+.subtitle {
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #111111;
+  margin-bottom: 20px;
+}
+
+.ul {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #444444;
+  line-height: 28px;
+  margin-left: 20px;
+  margin-bottom: 39px;
+}
+
+.information__text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #444444;
+  line-height: 28px;
+}
+
+.ul.ingredient.active {
+  display: none;
+}
+
+.ul.preparation.active {
+  display: none;
+}
+
+.information__text.active {
+  display: none;
+}
+
+.subtitle__header {
+  display: inline-flex
+}
+
+.button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: #999999;
+  margin-left: 8px;
+  padding-top: 9px;
+  cursor: pointer;
+}
+
+/* Chefs index */
+
+.chefs-grid-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 40px 230px;
+  justify-items: center;
+  justify-content: space-evenly;
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+
+.card-chef-index {
+  display: grid;
+  grid-template-columns: 64px 180px;
+  align-content: start;
+}
+
+.card__img-chef img{
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.card__info {
+  padding: 0 20px; 
+  margin-top: -15px;
+  text-align: start;
+}
+
+.total-chef-recipes {
+  margin-top: 4px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #777777;
+  text-align: start;
+}
+
+.card__title.chefs-home {
+  font-size: 18px;
+}
+
+/* Filter */
+
+.form-header {
+  margin-left: 450px;
+  position: absolute;
+  top: 30px;
+}
+
+.header-input {
+  padding: 10px 9px;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  outline: none;
+}
+
+.header-button {
+  background: #6558C3;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 9px;
+  cursor: pointer;
+}

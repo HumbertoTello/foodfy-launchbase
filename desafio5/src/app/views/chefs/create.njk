@@ -1,0 +1,23 @@
+{% extends "recipes/layout.njk" %}
+
+{% block content %}
+  <form class="create_recipe" method="POST" action="/chefs">
+    <div class="subheader">
+      <p>Criando chef</p>
+      <button type="submit">Salvar chef</button>
+    </div>
+
+    <div class="item first">
+      <div class="title">Nome</div>
+      <div>
+        <input type="text" name="name" value="">
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="title">Avatar</div>
+      <div>
+        <input type="text" name="avatar_url" placeholder="http://" value="">
+      </div>
+    </div>
+{% endblock %}

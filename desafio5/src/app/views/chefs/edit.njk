@@ -1,0 +1,36 @@
+{% extends "recipes/layout.njk" %}
+
+{% block content %}
+
+  <form class="create_recipe" method="POST" action="/chefs?_method=PUT">
+
+    <div class="subheader">
+      <p>Editando chef</p>
+      <div class="subheader-buttons">
+        <button type="submit">Salvar</button>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="title">Nome</div>
+      <div>
+        <input type="text" name="name" value="{{ chef.name }}">
+      </div>
+    </div>
+
+    <div class="item first">
+      <div class="title">Imagem da receita</div>
+      <div>
+        <input type="text" name="avatar_url" placeholder="http://" value="{{ chef.avatar_url }}">
+      </div>
+    </div>
+
+    <input type="hidden" name="id" value="{{ chef.id }}">
+  </form>
+
+  <form id="form-delete" action="/chefs?_method=DELETE" method="post">
+    <input type="hidden" name="id" value ="{{ chef.id }}">
+    <button type="submit">Deletar</button>
+  </form>
+
+{% endblock %}

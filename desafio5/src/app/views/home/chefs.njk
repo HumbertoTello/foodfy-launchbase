@@ -1,0 +1,22 @@
+{% extends "home/layout.njk" %}
+
+{% block content %}
+  <div class="chefs-grid-list">
+    {% for chef in chefs %}
+      <div class="card-chef-index">
+        
+          <div class="card__img-chef">
+            <img src="{{chef.avatar_url}}" alt="{{chef.name}}">
+          </div>
+       
+        <div class="card__info">
+          <div class="card__title chefs-home">
+            <p>{{chef.name}}</p>
+          </div>
+          <p class="total-chef-recipes">{{ chef.total_recipes }} Receitas</p>
+        </div>
+        <div class="push" style="height: 360px;"></div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
