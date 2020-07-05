@@ -10,6 +10,7 @@ routes.get("/recipes", home.recipes)
 routes.get("/recipe/:index", home.recipe)
 routes.get("/chefs", home.chefs)
 
+routes.get("/admin", recipes.admin)
 routes.get("/admin/recipes", recipes.index)
 routes.get("/admin/recipes/create", recipes.create)
 routes.get("/admin/recipes/:index", recipes.show)

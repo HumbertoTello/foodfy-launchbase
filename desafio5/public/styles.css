@@ -41,6 +41,10 @@ header img {
   margin: 0 30px;
 }
 
+.active {
+  font-weight: bold;
+}
+
 /* Banner */
 
 .banner {
@@ -313,12 +317,20 @@ footer p {
   cursor: pointer;
 }
 
+.recipes-search {
+  font-family: 'Roboto', sans-serif;
+  font-size: bold;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
 /* Chefs index */
 
 .chefs-grid-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 40px 230px;
+  gap: 20px 0px;
   justify-items: center;
   justify-content: space-evenly;
   min-height: 100%;

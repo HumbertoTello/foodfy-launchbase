@@ -1,6 +1,9 @@
 const Recipe = require("../models/Recipe")
 
 module.exports = {
+  admin(req, res) {
+    return res.redirect(`/admin/recipes`)
+  },
   index(req, res) {
     Recipe.all(function(recipes) {
       

@@ -1,6 +1,7 @@
 {% extends "recipes/layout.njk" %}
 
 {% block content %}
+  <p class="title-page">Gerenciar chefs</p>
   <div class="chefs-grid-list">
     {% for chef in chefs %}
       <div class="card-chef-index">
@@ -17,5 +18,8 @@
         </div>
       </div>
     {% endfor %}
+  </div>
+  <div class="button-index-wrap">
+    <a href="chefs/create" class="button-index">Cadastrar chef</a>
   </div>
 {% endblock %}

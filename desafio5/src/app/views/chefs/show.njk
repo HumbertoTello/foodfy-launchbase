@@ -8,7 +8,11 @@
   <div class="card-chef">
     <img src="{{ chef.avatar_url }}" alt="{{ chef.name }}">
     <p class="title-chef-name">{{ chef.name }}</p>
-    <p class="total-chef-recipes">{{ chef.total_recipes }} Receitas</p>
+    <p class="total-chef-recipes">
+      {% if chef.total_recipes == 0 %}Sem receitas cadastradas{%endif%} 
+      {% if chef.total_recipes == 1 %}{{ chef.total_recipes }} receita{%endif%}
+      {% if chef.total_recipes > 1%}{{ chef.total_recipes }} receitas{%endif%}
+    </p>
   </div>
   <div class="grid-title">
     <p>Receitas</p>

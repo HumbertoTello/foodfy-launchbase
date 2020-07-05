@@ -9,7 +9,7 @@
 
 
 {% block content %}
-
+  {%if filter.length > 0%}<p class="recipes-search">Buscando por: "{{filter}}"</p>{% endif %}
   <section class="cards">
 
     <div class="cards__grid">

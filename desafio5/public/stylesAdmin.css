@@ -236,9 +236,14 @@ header a:last-child {
   justify-content: space-between;
 }
 
+.title-page,
 .subheader p {
   font-size: 24px;
   font-weight: bold;
+}
+
+.title-page {
+  margin-top: 50px;
 }
 
 .button-index,
@@ -255,13 +260,12 @@ header a:last-child {
 
 .button-index-wrap {
   padding: 0 0px;
-  padding-top: 30px;
 }
 
 #form-delete button {
   position: absolute;
-  right: 300px;
-  top: 150px;
+  right: 71px;
+  top: 55px;
   background: #DC4747;;
   border-radius: 4px;
   color: white;
@@ -362,8 +366,9 @@ header a:last-child {
 
 .chefs-grid-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 200px 200px 200px 200px;
   padding: 40px 0px;
+  gap: 20px 0px;
   justify-items: center;
   justify-content: space-evenly;
 }

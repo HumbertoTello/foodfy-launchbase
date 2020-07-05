@@ -1,9 +1,7 @@
 {% extends "recipes/layout.njk" %}
 
 {% block content %}
-  <div class="button-index-wrap">
-    <a href="recipes/create" class="button-index">Cadastrar receita</a>
-  </div>
+  <p class="title-page">Gerenciar receitas</p>
   <div class="cards__grid">
     {% for recipe in recipes %}
       <div class="card">
@@ -27,6 +25,9 @@
         </div>
       </div>
     {% endfor %}
+  </div>
+  <div class="button-index-wrap">
+    <a href="recipes/create" class="button-index">Cadastrar receita</a>
   </div>
       
   <div class="push"></div>

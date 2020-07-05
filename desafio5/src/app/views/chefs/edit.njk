@@ -33,4 +33,14 @@
     <button type="submit">Deletar</button>
   </form>
 
+  <script>
+    const formDelete = document.querySelector("#form-delete")
+    formDelete.addEventListener("submit", function(event) {
+      if({{ chef.total_recipes }} > 0) {
+        const warning = alert("Este chef possui receitas, você não pode deletá-lo!")
+        event.preventDefault()
+      }
+    })
+  </script>
+
 {% endblock %}
