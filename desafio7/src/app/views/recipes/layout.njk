@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodfy Admin Area</title>
+  <link rel="stylesheet" href="/stylesAdmin.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <a href="/admin/recipes">
+      <img src="/logoAdmin.png" alt="Foodfy logo">
+    </a>
+    <a href="/admin/recipes">Receitas</a>
+    <a href="/admin/chefs">Chefs</a>
+  </header>
+
+  <div class="body-wrapper">
+    {% block content %} {% endblock %}
+  </div>
+  
+  <script src="/active.js"></script>
+  <script src="/scriptsUpload.js"></script>
+</body>
+
+</html>
