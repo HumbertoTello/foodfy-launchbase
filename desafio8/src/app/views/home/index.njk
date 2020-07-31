@@ -1,0 +1,47 @@
+{% extends "home/layout.njk" %}
+
+{% block filter %}
+  <form class="form-header" action="/recipes" method="GET">
+    <input class="header-input" type="text" name="filter" value={{filter}}>
+    <button class="header-button">Filtrar</button>
+  </form>
+{% endblock %}
+
+{% block content %}
+  <section class="banner">
+    <p class="banner__title">As melhores receitas</p>
+    <p class="banner__description">Aprenda a construir os melhores pratos<br/>
+      com receitas criadas por profissionais<br/>
+      do mundo inteiro.</p>
+    <img src="/chef.png" alt="">
+  </section>
+
+  <section class="cards">
+    <p class="cards__title">
+      Últimas receitas
+    </p>
+
+    <div class="cards__grid">
+      {% for recipe in recipes %}
+        <div class="card">
+          <a href="recipe/{{recipe.id}}">
+            <div class="card__img">
+              <img src="{{recipe.image}}" alt="{{recipe.title}}">
+            </div>
+          </a>
+          <div class="card__title">
+            <p>{{recipe.title}}</p>
+          </div>
+          <div class="card__author">
+            <p>
+              {% for chef in chefOptions %}
+                {% if recipe.chef_id == chef.id %} {{chef.name}} {% endif %}
+              {% endfor %}
+            </p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+  </section>
+{% endblock %}

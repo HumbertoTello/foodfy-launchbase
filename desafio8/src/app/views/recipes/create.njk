@@ -1,0 +1,102 @@
+{% extends "recipes/layout.njk" %}
+
+{% block content %}
+  <form class="create_recipe" method="POST" action="/recipes" enctype="multipart/form-data">
+    <div class="subheader">
+      <p>Criando receita</p>
+      <button type="submit">Salvar</button>
+    </div>
+
+    <div class="item first">
+      <div class="title">Imagem da receita</div>
+      <div id="photos-upload-wrapper">
+        <div id="photos-upload">
+          <input 
+            id="photos-input"          
+            type="file"
+            name="photos"
+            multiple
+            accept="image/*"
+            onchange="PhotosUpload.handleFileInput(event)"
+          >
+          <i class="material-icons">add</i>
+        </div>
+        <div id="photos-preview">
+          {% if files %}
+            {% for image in files %}
+              <div class="photo" id="{{image.id}}">
+                <img src="{{image.src}}" alt="{{image.name}}">
+                <i class="material-icons"
+                   onclick="PhotosUpload.removeOldPhoto(event)"
+                >
+                close
+                </i>
+              </div>
+            {% endfor %}
+            <input type="hidden" name="removed_files">
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="title">Nome da receita</div>
+      <div>
+        <input type="text" name="title" value="">
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="title">Chef</div>
+      <div>
+        <select name="chef">
+          {% for chef in chefOptions %}
+            <option value="{{chef.id}}" {% if recipes.chef_id == chef.id %} selected {% endif %}> {{ chef.name }} </option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="title">Ingredientes</div>
+      <div id="ingredients">
+        <div class="ingredient">
+          <input type="text" name="ingredients" value="" placeholder="Insira o ingrediente"/>
+        </div>
+      </div>
+      <div>
+        <p class="button-create add-ingredient">Adicionar novo ingrediente</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="title">Modo de preparo</div>
+      <div id="preparations">
+        <div class="preparation">
+          <input type="text" name="preparation" value="" placeholder="Insira o passo de preparo"/>
+        </div>
+      </div>
+      <div>
+        <p class="button-create add-preparation">Adicionar novo passo</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="title">Informações adicionais</div>
+      <div>
+        <textarea type="text" name="information" value="" placeholder="Deseja colocar informações adicionais?"></textarea>
+      </div>
+    </div>
+  </form>
+
+  <script src="/scripts2.js"></script>
+  <script>
+    const formCreate = document.querySelector(".create_recipe")
+    formCreate.addEventListener("submit", function(event) {
+      if( PhotosUpload.files.length < 1) {
+        const warning = alert("Envie pelo menos 1 foto da receita")
+        event.preventDefault()
+      }
+    })
+  </script>
+{% endblock %}

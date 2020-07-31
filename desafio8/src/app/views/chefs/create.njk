@@ -1,0 +1,30 @@
+{% extends "recipes/layout.njk" %}
+
+{% block content %}
+  <form class="create_recipe" method="POST" action="/chefs" enctype="multipart/form-data">
+    <div class="subheader">
+      <p>Criando chef</p>
+      <button type="submit">Salvar chef</button>
+    </div>
+
+    <div class="item first">
+      <div class="title">Nome</div>
+      <div>
+        <input type="text" name="name" value="">
+      </div>
+    </div>
+
+    <div class="item-avatar">
+      <div class="title">Avatar</div>
+      <div id="avatar-upload">
+          <input
+            value = "Enviar Avatar"
+            class="avatar-input"       
+            type="file"
+            name="photo"
+            accept="image/*"
+          >
+          <p>Enviar Avatar</p>
+      </div>
+    </div>
+{% endblock %}
